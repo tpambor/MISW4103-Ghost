@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const faker = require('faker');
 const parser = require('node-html-parser');
+const crypto = require('crypto');
 
 //Constants
 var screenshots_directory = './screenshots';
@@ -132,7 +133,7 @@ async function recursiveExploration(page, link, depth, parentState){
     return;
   } 
   console.log("Exploring");
-  await page.goto(link, {waitUntil: 'networkidle2'}).catch((err)=>{
+  await page.goto(link, {waitUntil: 'networkidle'}).catch((err)=>{
     console.log(err); 
     return; 
   });
@@ -218,8 +219,16 @@ function slugify(stringUrl) {
 async function addListeners(page){
   page.on('pageerror', (err) =>{
     err_name = err.toString();
-    let capture_path = screenshots_directory + err_name + '.png'
+    err_id = crypto.randomBytes(20).toString('hex');
+    console.log("#################################");
+    console.log("Error " + err_id + ": " + err_name);
+    let capture_path = screenshots_directory + "/err_" + err_id + '.png';
+    try {
     page.screenshot({path:capture_path});
+    } catch(error) {
+      console.log("Failed to take screenshot");
+    }
+    console.log("#################################");
   });
 
   page.on('console', msg => {
