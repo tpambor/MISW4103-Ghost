@@ -6,6 +6,12 @@ const faker = require('faker');
 const parser = require('node-html-parser');
 const crypto = require('crypto');
 
+function delay(time) {
+   return new Promise(function(resolve) {
+       setTimeout(resolve, time)
+   });
+}
+
 //Constants
 var screenshots_directory = './screenshots';
 const beforeInteraction = 'BEFORE';
@@ -82,6 +88,12 @@ console.log(inputValues);
       else{
         clean(temp_directory)
       }
+
+      await page.goto("http://127.0.0.1:2368/ghost/#/signin", {waitUntil: 'networkidle'});
+      await page.locator('#ember8').fill('ripper@example.org');
+      await page.locator('#ember10').fill('0123456789!');
+      await page.locator('#ember12').click();
+      await delay(4000);
 
       //-------------------------------------------------------------------------------------------------------------------------------------------------
       //Web application ripping
