@@ -300,11 +300,11 @@ function avPag(){
     if(curPageMaxY - curY >= viewportHeight){ 
         if(curPageMaxY - (curY + viewportHeight) >= viewportHeight){
             curY = curY + viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         } 
         else{
             curY = curPageMaxY - viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         info += `Successfully scrolled down from y=${prev} to y=${curY}`
@@ -324,12 +324,12 @@ function rePag(){
     else{
         if(viewportHeight > curY){
             curY =  0
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         else{
             curY = curY - viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         }
         info += `Successfully scrolled up from y=${prev} to y=${curY}`
     }
@@ -342,11 +342,11 @@ function horizontalScrollFw(){
     if(curPageMaxX - curX >= viewportWidth){ 
         if(curPageMaxX - (curX + viewportWidth) >= viewportWidth){
             curX = curX + viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         } 
         else{
             curX = curPageMaxX - viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         info += `Successfully scrolled to the right from x=${prev} to x=${curX}`
@@ -366,12 +366,12 @@ function horizontalScrollBk(){
     else{
         if(viewportWidth > curX){
             curX =  0
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         else{
             curX = curX - viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         }
         info += `Successfully scrolled to the left from x=${prev} to x=${curX}`
     }

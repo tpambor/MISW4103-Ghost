@@ -84,7 +84,7 @@ function randClick(){
         if(!!element){
             //Use cypress selector if any fits
             if(!!element.id){ //boolean that indicates if the element has a non-empty id
-                cy.get(`#${element.id}`).click()
+                cy.get(`#${element.id}`).click({force:true})
                 info = `${element.tagName} with id: ${element.id}`
             }
             /*
@@ -138,7 +138,7 @@ function randDClick(){
         if(!!element){
             //Use cypress selector if any fits
             if(!!element.id){ //boolean that indicates if the element has a non-empty id
-                cy.get(`#${element.id}`).dblclick()
+                cy.get(`#${element.id}`).dblclick({force:true})
                 info = `${element.tagName} with id: ${element.id}`
             }
             /*
@@ -192,7 +192,7 @@ function randRClick(){
         if(!!element){
             //Use cypress selector if any fits
             if(!!element.id){ //boolean that indicates if the element has a non-empty id
-                cy.get(`#${element.id}`).rightclick()
+                cy.get(`#${element.id}`).rightclick({force:true})
                 info = `${element.tagName} with id: ${element.id}`
             }
             /*else if(!!element.className){ //boolean that indicates if the element has a non-empty className
@@ -288,11 +288,11 @@ function avPag(){
     if(curPageMaxY - curY >= viewportHeight){ 
         if(curPageMaxY - (curY + viewportHeight) >= viewportHeight){
             curY = curY + viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         } 
         else{
             curY = curPageMaxY - viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         info += `Successfully scrolled down from y=${prev} to y=${curY}`
@@ -312,12 +312,12 @@ function rePag(){
     else{
         if(viewportHeight > curY){
             curY =  0
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         else{
             curY = curY - viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         }
         info += `Successfully scrolled up from y=${prev} to y=${curY}`
     }
@@ -330,11 +330,11 @@ function horizontalScrollFw(){
     if(curPageMaxX - curX >= viewportWidth){ 
         if(curPageMaxX - (curX + viewportWidth) >= viewportWidth){
             curX = curX + viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         } 
         else{
             curX = curPageMaxX - viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         info += `Successfully scrolled to the right from x=${prev} to x=${curX}`
@@ -354,12 +354,12 @@ function horizontalScrollBk(){
     else{
         if(viewportWidth > curX){
             curX =  0
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         else{
             curX = curX - viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.scrollTo(curX, curY, { ensureScrollable: false })
         }
         info += `Successfully scrolled to the left from x=${prev} to x=${curX}`
     }
