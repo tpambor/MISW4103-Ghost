@@ -1,11 +1,11 @@
 {
     "projectId":"TSDL-Monkey-with-cypress",
-    "baseUrl":"https://consumer.huawei.com/co/",
+    "baseUrl":"http://host.docker.internal:2368",
     "env":{
         "appName":"App prueba",
-        "events":50,
-        "delay":300,
-        "seed":1234,
+        "events":200,
+        "delay":1000,
+        "seed":2222,
         "pctClicks":19,
         "pctScroll":17,
         "pctSelectors":16,
@@ -15,8 +15,8 @@
     },
     "integrationFolder": "./cypress/integration/monkey",
     "pluginsFile": "./cypress/plugins/index.js",
-    "pageLoadTimeout":120000,
-    "defaultCommandTimeout":120000,
+    "pageLoadTimeout":4000,
+    "defaultCommandTimeout":4000,
     "testFiles": "monkey.js",
     "videosFolder":"./results"
 }

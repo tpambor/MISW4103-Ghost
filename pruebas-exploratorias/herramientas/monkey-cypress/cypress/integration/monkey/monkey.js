@@ -546,6 +546,18 @@ describe( `${appName} under monkeys`, function() {
                 curPageMaxX = Math.max( d.body.scrollWidth, d.body.offsetWidth, d.documentElement.clientWidth, d.documentElement.scrollWidth, d.documentElement.offsetWidth) - win.innerWidth
             })
             cy.wait(1000)
+
+            cy.visit('/ghost/#/signin');
+            cy.wait(4000);
+
+            cy.get("input[name='identification']").type("monkey@example.org");
+            cy.get("input[name='password']").type("0123456789!");
+            cy.get('button[type="submit"]').click();
+            cy.wait(4000);
+
+            cy.visit('/ghost/#/posts');
+            cy.wait(4000);
+
             //Add an event for each type of event in order to enter the else statement of randomEvent method
             for(let i = 0; i < events + 5; i++){
                 evtIndex++
