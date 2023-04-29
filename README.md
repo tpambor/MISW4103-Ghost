@@ -1,5 +1,5 @@
 # MISW4103-Ghost
-1. [Enlaces a las incidencias](/issues)
+1. [Enlaces a las incidencias]([/issues](https://github.com/tpambor/MISW4103-Ghost/issues))
 2. Enlace a la wiki: https://github.com/tpambor/MISW4103-Ghost/wiki
 3. Descripción De Resultados
 - https://github.com/tpambor/MISW4103-Ghost/wiki/Descripci%C3%B3n-De-Resultados-Monkey-cypress 
