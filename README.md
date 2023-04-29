@@ -1,4 +1,16 @@
 # MISW4103-Ghost
+
+Pruebas Automatizadas de Software
+Equipo #3
+
+Laura Alejandra Carrillo Guzmán​​
+
+Sandra Victoria Hurtado Gil​​
+
+Leidy Viviana Osorio Jimenez​​
+
+Tim Ulf Pambor​
+
 1. [Enlaces a las incidencias](https://github.com/tpambor/MISW4103-Ghost/issues)
 2. [Enlaces wiki](https://github.com/tpambor/MISW4103-Ghost/wiki)
 3. Descripción De Resultados
