@@ -17,5 +17,5 @@ Equipo #3
 5. [Pros y contras RIPuppet](https://github.com/tpambor/MISW4103-Ghost/wiki/Pros-Contras-RIPuppet)
 6. [Estrategia 1](https://uniandes-my.sharepoint.com/:b:/g/personal/l_carrillog_uniandes_edu_co/EYqu2mjqVsJAvhnywOIRwBQB2BaHPaHMFyZg2RDRlTBc7Q)
 7. [Estrategia 2](https://uniandes-my.sharepoint.com/:b:/g/personal/l_carrillog_uniandes_edu_co/EdJ7z5m2A8lNt5ucF1wlqjEBdRxBE6PIVzw1skjk7qiVfg)
-8. [Presentación](https://uniandes-my.sharepoint.com/:p:/g/personal/l_carrillog_uniandes_edu_co/ETrJZGQKK7VApGP_jQdeq6gBni-bddd-Xu1DNW2KztLqrg?e=L0cmqL)
+8. [Presentación](https://uniandes-my.sharepoint.com/:b:/g/personal/l_carrillog_uniandes_edu_co/EaRKkC5Cfr1FieZQtFjb0oABiVXXCNZvPCqxyZtaotDrvA?e=D0Rpzp)
 9. [Video](https://uniandes-my.sharepoint.com/:v:/g/personal/t_pambor_uniandes_edu_co/Ec_pyiLodp5Anlst47f9O8sB9xJSluwSMbWi6sygfYA-xw?e=aiIPTQ)
