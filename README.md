@@ -2,10 +2,10 @@
 
 Pruebas Automatizadas de Software
 Equipo #3
-- Laura Alejandra Carrillo Guzmán​​
-- Sandra Victoria Hurtado Gil​​
-- Leidy Viviana Osorio Jimenez​​
-- Tim Ulf Pambor​
+- Laura Alejandra Carrillo Guzmán, l.carrillog@uniandes.edu.co​​
+- Sandra Victoria Hurtado Gil, sv.hurtadog@uniandes.edu.co​​
+- Leidy Viviana Osorio Jimenez, l.osorioj@uniandes.edu.co​​
+- Tim Ulf Pambor, t.pambor@uniandes.edu.co​​
 
 ## Semana 4
 1. [Enlaces a las incidencias](https://github.com/tpambor/MISW4103-Ghost/issues)
